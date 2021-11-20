@@ -26,13 +26,14 @@ const Border = styled.div`
 
 interface Props {
   title: string;
+  className?: string;
 }
 
 export const CommentModal: React.FC<Props> = (props) => {
-  const { title } = props;
+  const { title, className } = props;
 
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <ModalTitle>{title}</ModalTitle>
       <Border />
     </Wrapper>

@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import { App } from './components';
 import reportWebVitals from './reportWebVitals';
 import { CommentModal } from './components/CommentModal';
+import styled from 'styled-components';
+
+const StyledModal = styled(CommentModal)`
+  margin-left: 250px;
+`;
 
 const modalArray: Array<string> = ['Modal 1', 'Modal 2', 'Modal 3'];
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
     {modalArray.map((title, index) => (
-      <CommentModal key={index} title={title} />
+      <StyledModal key={index} title={title} />
     ))}
   </React.StrictMode>,
   document.getElementById('root')
